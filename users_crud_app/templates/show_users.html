@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="container pt-2">
+    <h1>Profile</h1>
+    <div>
+        <p>Full Name: {{user['first_name']}} {{user['last_name']}}</p>
+        <p>Email: {{user['email']}}</p>
+        <p>Created At: {{user['created_at']}}</p>
+        <p>Last Updated On: {{user['updated_at']}}</p>
+    </div>
+    <div>
+        <a class="btn btn-dark" href="/users">Go Back to Users</a>
+        <a class="btn btn-dark" href="/users/{{user['id']}}/edit">Edit Profile</a>
+        <a class="btn btn-danger" href="/users/delete/{{user['id']}}">Delete Profile</a>
+    </div>
+</body>
+
+</html>
